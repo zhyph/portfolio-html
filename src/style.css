@@ -38,7 +38,7 @@ h4 {
   line-height: 2.25rem; /* 150% */
 }
 
-strong {
+.secondary {
   color: var(--second-color);
 }
 
