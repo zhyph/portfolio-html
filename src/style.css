@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Krona One", sans-serif;
   display: flex;
   flex-direction: column;
@@ -14,13 +14,14 @@ body {
   background-color: var(--main-bg-color);
 }
 
-main {
+body > main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3.75rem;
 }
 
+/* Default Styles */
 h1 {
   color: var(--main-color);
   font-size: 2.25rem;
@@ -38,17 +39,24 @@ h4 {
   line-height: 2.25rem; /* 150% */
 }
 
-.secondary {
+.primary-color {
+  color: var(--main-color);
+}
+
+.secondary-color {
   color: var(--second-color);
 }
 
-a {
+.secondary-bg {
+  background-color: var(--second-color);
+  color: var(--main-bg-color);
+}
+
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 120px;
-  background-color: var(--second-color);
-  color: var(--main-bg-color);
   width: min-content;
   padding: 1.5rem 3rem;
   border-radius: 1rem;
@@ -60,9 +68,10 @@ a {
   line-height: 2.25rem; /* 150% */
 }
 
-a:hover {
+.secondary-bg.btn:hover {
   background-color: #1b9db7;
 }
+/* End - Default Styles */
 
 .wrapper {
   display: flex;
@@ -73,7 +82,7 @@ a:hover {
   max-width: 42ch;
 }
 
-.info-wrapper {
+.wrapper__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,9 +90,20 @@ a:hover {
   gap: 2.5rem;
 }
 
-.button-wrapper {
+.wrapper__btn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+  body > main {
+    flex-direction: column-reverse;
+    margin: 2.5rem 0;
+  }
+
+  img {
+    width: 50%;
+  }
 }
