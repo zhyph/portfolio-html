@@ -9,20 +9,28 @@ body {
   font-family: "Krona One", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--main-bg-color);
 }
 
-body > main {
+body > .main-wrapper {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
   gap: 3.75rem;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
 /* Default Styles */
-h1 {
+.h1 {
   color: var(--primary-color);
   font-size: 2.25rem;
   font-style: normal;
@@ -30,7 +38,7 @@ h1 {
   line-height: 3.5rem; /* 155.556% */
 }
 
-h3 {
+.h3 {
   color: var(--primary-color);
   font-family: Krona One;
   font-size: 1.5rem;
@@ -39,7 +47,7 @@ h3 {
   line-height: 2.5rem; /* 166.667% */
 }
 
-h4 {
+.h4 {
   color: var(--primary-color);
   font-family: Montserrat;
   font-size: 1.5rem;
@@ -118,11 +126,56 @@ h4 {
   gap: 2rem;
 }
 
+.main-footer {
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+}
+
+.main-footer .h4 {
+  color: var(--main-bg-color);
+}
+
+.main-header {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.main-header > nav {
+  display: flex;
+  gap: 5rem;
+}
+
+.main-header > nav a {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--second-color);
+}
+
+.main-header > nav a:hover {
+  color: var(--primary-color);
+}
+
 @media (max-width: 1024px) {
-  body > main {
-    flex-direction: column-reverse;
+  body > .main-wrapper {
     align-items: center;
     margin: 2.5rem 0;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .main-header {
+    padding: 2rem 0;
   }
 
   img {
