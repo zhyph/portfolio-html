@@ -12,6 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-bg-color);
+  gap: 2.5rem;
 }
 
 body > .main-wrapper {
@@ -26,7 +27,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 2.5rem;
+  gap: 3rem;
 }
 
 /* Default Styles */
@@ -141,7 +142,7 @@ main {
 
 .main-header {
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem;
 }
 
 .main-header > nav {
@@ -175,7 +176,7 @@ main {
   }
 
   .main-header {
-    padding: 2rem 0;
+    padding: 2rem;
   }
 
   img {
