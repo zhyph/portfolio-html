@@ -2,6 +2,7 @@
   --main-bg-color: #000;
   --primary-color: #f6f6f6;
   --second-color: #22d4fd;
+  --text-color: #f6f6f6;
 }
 
 body {
@@ -80,6 +81,7 @@ main {
 }
 
 .btn {
+  color: var(--text-color, --main-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,8 +99,12 @@ main {
   line-height: 2.25rem; /* 150% */
 }
 
+.btn i {
+  color: var(--second-color, inherit);
+}
+
 .btn:hover {
-  background-color: #272727;
+  filter: brightness(0.4);
 }
 /* End - Default Styles */
 
